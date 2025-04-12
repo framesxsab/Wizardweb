@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="auth.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -30,7 +31,10 @@
                     }
                 }
             }
-        }
+        };
+
+        // GitHub OAuth Configuration
+        const GITHUB_CLIENT_ID = 'YOUR_GITHUB_CLIENT_ID';
     </script>
 </head>
 <body class="text-white leading-relaxed bg-hero-pattern bg-fixed bg-cover bg-no-repeat">
@@ -41,6 +45,11 @@
                 <li><a href="#about" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">About</a></li>
                 <li><a href="#events" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">Events</a></li>
                 <li><a href="#contact" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">Contact</a></li>
+                <li>
+                    <button onclick="loginWithGithub()" class="flex items-center px-4 py-2 bg-gradient-to-r from-blue-600/30 via-blue-500/30 to-blue-600/30 text-blue-400 rounded-full hover:from-blue-600/50 hover:via-blue-500/50 hover:to-blue-600/50 transition-all duration-300">
+                        <i class="fab fa-github mr-2"></i>Login
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
