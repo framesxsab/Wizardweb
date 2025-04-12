@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magical world of GDG</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sigmar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-blue': '#0a0a20',
+                        'navy-blue': '#0d1933',
+
+                    },
+                    fontFamily: {
+                        'cinzel': ['Cinzel', 'serif'],
+                        'pt-serif': ['PT Serif', 'serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('/images/bg2.png')",
+                        'lapy-pattern': "url('/images/lapy.jpg')",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-white leading-relaxed bg-hero-pattern bg-fixed bg-cover bg-no-repeat">
+    <header class="py-2 fixed w-full top-0 z-10 bg-transparent backdrop-blur-sm">
+        <nav class="bg-gradient-to-r from-dark-blue/50 via-navy-blue/40 to-dark-blue/50 w-11/12 max-w-6xl mx-auto my-2 rounded-full flex justify-between items-center px-6 py-3 hover:shadow-[0_0_30px_rgba(37,99,235,0.2)] transition-all duration-300">
+            <a href="#" class="text-2xl font-cinzel text-white hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">GDG</a>
+            <ul class="flex space-x-8 text-lg font-cinzel">
+                <li><a href="#about" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">About</a></li>
+                <li><a href="#events" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">Events</a></li>
+                <li><a href="#contact" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="bg-gradient-to-b from-dark-blue/90 via-navy-blue/80 to-dark-blue/90 relative">
+        <div class="absolute inset-0 bg-lapy-pattern bg-fixed bg-cover bg-center opacity-15 mix-blend-soft-light hover:opacity-20 transition-opacity duration-700 filter contrast-125 brightness-110"></div>
+        <div class="relative">
+            <section class="min-h-screen flex items-center justify-center px-4">
+                <div class="text-center">
+                    <h2 class="text-3xl font-cinzel mb-4 text-blue-400">Magical world</h2>
+                    <h1 class="text-6xl font-cinzel mb-6 hover:text-blue-400 hover:scale-105 transform transition-all duration-500 hover:shadow-[0_0_50px_rgba(37,99,235,0.3)] rounded-lg">Google Developer Group</h1>
+                    <p class="text-xl font-pt-serif max-w-2xl mx-auto text-gray-300 mb-8">Join our community of developers, designers, and tech enthusiasts to learn, share, and grow together.</p>
+
+                    <a href="#" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-cinzel rounded-full hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">Join Now</a>
+                </div>
+            </section>
+
+            <section id="about" class="py-20 px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-br from-dark-blue/50 via-navy-blue/40 to-dark-blue/50 rounded-2xl p-8 hover:shadow-[0_0_40px_rgba(37,99,235,0.2)] transition-all duration-500">
+                        <h2 class="text-4xl font-cinzel mb-8 text-center">About Us</h2>
+                        <p class="font-pt-serif text-gray-300 max-w-2xl mx-auto text-center">GDG is a community of developers interested in Google's developer technology.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-br from-dark-blue/50 via-navy-blue/40 to-dark-blue/50 rounded-2xl p-8 hover:shadow-[0_0_40px_rgba(37,99,235,0.2)] transition-all duration-500">
+                        <h2 class="text-4xl font-cinzel mb-8 text-center">The Magical Hat</h2>
+                        <div class="text-center mb-8 relative">
+                            <div class="absolute inset-0 bg-blue-500/20 blur-xl rounded-full transform animate-pulse"></div>
+                            <img 
+                                src="images/skull.svg" 
+                                alt="Magical Skull" 
+                                class="w-40 h-40 mx-auto object-contain hover:scale-110 transform hover:-translate-y-2 transition-all duration-300 animate-bounce"
+                            />
+                            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-8 h-1 bg-blue-400/50 rounded-full blur-sm"></div>
+                        </div>
+                        <p class="font-pt-serif text-gray-300 max-w-2xl mx-auto text-center mb-4">
+                            Welcome to the realm of endless possibilities, where code transforms into magic.
+                            Like a wizard's hat that holds countless secrets, our community is a vessel of knowledge and innovation.
+                        </p>
+                        <p class="font-pt-serif text-gray-300 max-w-2xl mx-auto text-center">
+                            Join us in this magical journey of learning and discovery, where every line of code weaves a new spell
+                            and every developer is a master of their craft.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-br from-dark-blue/50 via-navy-blue/40 to-dark-blue/50 rounded-2xl p-8 hover:shadow-[0_0_40px_rgba(37,99,235,0.2)] transition-all duration-500">
+                        <h2 class="text-4xl font-cinzel mb-8 text-center">Blue Potion</h2>
+                        <div class="text-center mb-8 relative">
+                            <div class="absolute inset-0 bg-blue-500/20 blur-xl rounded-full transform animate-pulse"></div>
+                            <img 
+                                src="images/pot 1.svg" 
+                                alt="Magical Potion" 
+                                class="w-32 h-32 mx-auto object-contain hover:scale-110 transform hover:-translate-y-2 transition-all duration-300 animate-[bounce_3s_ease-in-out_infinite]"
+                            />
+                            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-8 h-1 bg-blue-400/50 rounded-full blur-sm"></div>
+                        </div>
+                        <p class="font-pt-serif text-gray-300 max-w-2xl mx-auto text-center mb-4">
+                            Discover the mystical blue potion of knowledge, where each drop contains the essence of innovation and creativity.
+                            Let the magical elixir enhance your coding prowess and unlock new possibilities.
+                        </p>
+                        <p class="font-pt-serif text-gray-300 max-w-2xl mx-auto text-center">
+                            Brew your own success story with our community's collective wisdom and experience.
+                            Every contribution adds to this powerful concoction of learning and growth.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="events" class="py-20 px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-br from-dark-blue/50 via-navy-blue/40 to-dark-blue/50 rounded-2xl p-8 hover:shadow-[0_0_40px_rgba(37,99,235,0.2)] transition-all duration-500">
+                        <h2 class="text-4xl font-cinzel mb-8 text-center">Upcoming Events</h2>
+                        <div class="grid gap-6 md:grid-cols-2">
+                            <div class="bg-gradient-to-br from-dark-blue/70 via-navy-blue/60 to-dark-blue/70 rounded-xl p-6 hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] transition-all duration-300 hover:scale-[1.02]">
+                                <h3 class="text-2xl font-cinzel text-blue-400 mb-3">Web Wizard 3.0</h3>
+                                <div class="space-y-2 text-gray-300 font-pt-serif">
+                                    <p class="flex items-center gap-2">
+                                        <i class="far fa-calendar-alt text-blue-400"></i>
+                                        5th April, 2024
+                                    </p>
+                                    <p class="flex items-center gap-2">
+                                        <i class="fas fa-map-marker-alt text-blue-400"></i>
+                                        RBU College
+                                    </p>
+                                    <p class="mt-4">Join us for an exciting web development workshop filled with learning, coding, and magical innovation!</p>
+                                </div>
+                                <a href="https://wizard-xi.vercel.app/" class="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-blue-600/30 via-blue-500/30 to-blue-600/30 text-blue-400 rounded-full hover:from-blue-600/50 hover:via-blue-500/50 hover:to-blue-600/50 transition-all duration-300">Learn More →</a>
+                            </div>
+
+                            <!-- New Event Card -->
+                            <div class="bg-gradient-to-br from-dark-blue/70 via-navy-blue/60 to-dark-blue/70 rounded-xl p-6 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 hover:scale-[1.02] relative overflow-hidden">
+                                <div class="absolute -right-12 top-4 rotate-45 bg-green-500/80 px-12 py-1 text-sm font-cinzel">
+                                    Completed
+                                </div>
+                                <h3 class="text-2xl font-cinzel text-blue-400 mb-3">GDG EXPLORE 2.0</h3>
+                                <div class="space-y-2 text-gray-300 font-pt-serif">
+                                    <p class="flex items-center gap-2">
+                                        <i class="fas fa-check-circle text-green-400"></i>
+                                        Successful Event
+                                    </p>
+                                    <p class="mt-4">Curious about tech? Dive into the tech world! Discover design, web dev, ML, & more at GDG Explore.</p>
+                                </div>
+                                <a href="#" class="inline-block mt-4 px-6 py-2 bg-green-600/30 text-green-400 rounded-full hover:bg-green-600/50 transition-all duration-300">View Highlights →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="py-20 px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-br from-dark-blue/50 via-navy-blue/40 to-dark-blue/50 rounded-2xl p-8 hover:shadow-[0_0_40px_rgba(37,99,235,0.2)] transition-all duration-500">
+                        <h2 class="text-4xl font-cinzel mb-8 text-center">Get in Touch</h2>
+                        <p class="font-pt-serif text-gray-300 mb-4 text-center">Join our community and stay updated with latest events.</p>
+                        <div class="flex justify-center space-x-6">
+                            <a href="https://github.com/RCOEM-Google-DSC/webwiz-3.0" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-blue-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] p-2 rounded-full"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-2xl hover:text-blue-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] p-2 rounded-full"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-2xl hover:text-blue-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] p-2 rounded-full"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:gdgrbu@gmail.com" class="text-2xl hover:text-blue-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] p-2 rounded-full"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="py-16 px-4 relative">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Frame Container -->
+                    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-dark-blue/50 via-navy-blue/40 to-dark-blue/50 mb-20 hover:scale-[1.02] transition-transform duration-500 
+                        shadow-[0_0_50px_rgba(37,99,235,0.3)]
+                        hover:shadow-[0_0_80px_rgba(37,99,235,0.4),inset_0_0_30px_rgba(59,130,246,0.4)]
+                        before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/10 before:via-transparent before:to-blue-500/10">
+                        <div class="absolute inset-0 p-8">
+                            <img src="images/Frame.png" alt="Decorative Frame" class="w-full h-full object-contain opacity-70 hover:opacity-90 transition-all duration-500" />
+                        </div>
+                        <div class="py-48 bg-gradient-to-b from-transparent via-dark-blue/10 to-transparent">
+                            
+                        </div>
+                    </div>
+
+                    <!-- GDG Text Container  -->
+                    <div class="text-center -mt-4">
+                        <div class="flex items-center justify-center gap-8 px-4">
+                            <div class="w-32 h-[2px] bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
+                            <span class="text-3xl font-cinzel bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent hover:from-blue-300 hover:to-blue-200 transition-all duration-300 bg-dark-blue/90 px-8 py-3 rounded-full shadow-lg">
+                                GDG
+                            </span>
+                            <div class="w-32 h-[2px] bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+</body>
+</html>
