@@ -18,17 +18,7 @@ A magical web portal for Google Developer Group (GDG) featuring event informatio
 - Google Fonts (Cinzel, PT Serif)
 - GitHub OAuth
 
-## Setup Instructions
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/RCOEM-Google-DSC/webwiz-3.0.git
-   ```
-
-2. Configure GitHub OAuth:
-   - Replace `YOUR_GITHUB_CLIENT_ID` in `updatedindex.html` with your actual GitHub OAuth client ID.
-
-3. Open `updatedindex.html` in your browser to view the site.
 
 ## Contact
 
