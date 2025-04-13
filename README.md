@@ -1,37 +1,52 @@
-# Wizardweb
+# GDG Wizard Website
 
-Welcome to **Wizardweb**, a magical web portal designed for the Google Developer Group (GDG). This platform is your gateway to event information, community updates, and a mystical theme that brings a touch of magic to the tech world.
+A magical web interface for Google Developer Group showcasing events, information, and community engagement.
 
-## ✨ Features
+## Features
 
-- 🎨 **Modern UI**: A sleek and magical design with animations to enhance the user experience.
-- 📱 **Responsive Design**: Optimized for all devices, from desktops to mobile phones.
-- 🎯 **Event Showcase**: Highlight upcoming events and allow users to register seamlessly.
-- 📬 **Contact Integration**: Stay connected with social media links and contact options.
+- Responsive design with magical UI elements
+- Interactive navigation
+- Event showcase section
+- Member authentication
+- Contact information and social links
 
-## 🛠️ Technologies Used
+## Tech Stack
 
-- **HTML5**: For structuring the web pages.
-- **Tailwind CSS**: For styling and responsive design.
-- **Font Awesome**: For beautiful icons.
-- **Google Fonts**: Featuring Cinzel and PT Serif for a magical typography.
-- **JavaScript**: For interactivity and functionality.
+- HTML5
+- TailwindCSS
+- JavaScript
+- Font Awesome Icons
+- Custom Google Fonts
 
-## 🚀 Getting Started
+## Setup
 
-Follow these steps to set up Wizardweb on your local machine:
+1. Clone the repository
+2. Open `index.html` in your browser
+3. No build process required - all dependencies are loaded via CDN
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/framesxsab/wizardweb.git
-   ```
+## Project Structure
 
-2. Configure GitHub OAuth:
-   - Replace `YOUR_GITHUB_CLIENT_ID` in `index.html` with your actual GitHub OAuth client ID.
+```
+wizardweb/
+├── images/
+│   ├── bg2.png
+│   ├── lapy.jpg
+│   ├── skull.svg
+│   ├── pot 1.svg
+│   └── Frame.png
+├── index.html
+├── auth.js
+└── README.md
+```
 
-3. Open `index.html` in your browser to view the site.
+## Development
+
+To modify the project:
+
+1. Edit the HTML in `index.html`
+2. TailwindCSS configurations are in-file
+3. Authentication logic is in `auth.js`
 
 ## Contact
 
-- GitHub: [RCOEM-Google-DSC/webwiz-3.0](https://github.com/RCOEM-Google-DSC/webwiz-3.0)
-- Email: gdgrbu@gmail.com
+For more information, visit [GDG RBU](http://rbu.gdgoc.one)
