@@ -55,3 +55,11 @@ To modify the project:
 <div align="center">
 ⭐ Made with magic by GDG ⭐
 </div>
+![image](https://github.com/user-attachments/assets/926a7f59-f605-409a-b15c-acd5549c6cd2)
+![image](https://github.com/user-attachments/assets/59601055-cf7e-41c9-adfe-68437b1c176c)
+![image](https://github.com/user-attachments/assets/354b49cb-721a-41ec-b5eb-134f6afa32c7)
+![image](https://github.com/user-attachments/assets/9c6bdae9-e411-497c-83e1-8e2d5c94acda)
+
+
+
+
