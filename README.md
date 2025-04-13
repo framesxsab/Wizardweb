@@ -26,16 +26,12 @@ Follow these steps to set up Wizardweb on your local machine:
    git clone https://github.com/framesxsab/wizardweb.git
    ```
 
-2. **Run the project**:
-   - Open `updatedindex.html` in your browser to explore the magical world of Wizardweb.
+2. Configure GitHub OAuth:
+   - Replace `YOUR_GITHUB_CLIENT_ID` in `updatedindex.html` with your actual GitHub OAuth client ID.
 
-## 📞 Contact Us
+3. Open `updatedindex.html` in your browser to view the site.
 
-We’d love to hear from you! If you have any questions, feedback, or just want to say hi, feel free to reach out:
+## Contact
 
-- **GitHub**: [framesxsab/wizardweb](https://github.com/framesxsab/wizardweb)
-- **Email**: gdgrbu@gmail.com
-
----
-
-Thank you for visiting Wizardweb! We hope you enjoy the magical experience. ✨
+- GitHub: [RCOEM-Google-DSC/webwiz-3.0](https://github.com/RCOEM-Google-DSC/webwiz-3.0)
+- Email: gdgrbu@gmail.com
