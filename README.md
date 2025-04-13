@@ -21,8 +21,11 @@ Welcome to **Wizardweb**, a magical web portal designed for the Google Developer
 
 Follow these steps to set up Wizardweb on your local machine:
 
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/framesxsab/wizardweb.git
+   ```
 
-<<<<<<< HEAD
 2. Configure GitHub OAuth:
    - Replace `YOUR_GITHUB_CLIENT_ID` in `index.html` with your actual GitHub OAuth client ID.
 
@@ -30,11 +33,5 @@ Follow these steps to set up Wizardweb on your local machine:
 
 ## Contact
 
-=======
-3. Open `index.html` in your browser to view the site.
-
-## Contact
-
->>>>>>> fbaf3965cbdae2051892bd0edd6b8763132fd28f
 - GitHub: [RCOEM-Google-DSC/webwiz-3.0](https://github.com/RCOEM-Google-DSC/webwiz-3.0)
 - Email: gdgrbu@gmail.com
