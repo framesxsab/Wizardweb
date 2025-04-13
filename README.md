@@ -27,9 +27,9 @@ Follow these steps to set up Wizardweb on your local machine:
    ```
 
 2. Configure GitHub OAuth:
-   - Replace `YOUR_GITHUB_CLIENT_ID` in `updatedindex.html` with your actual GitHub OAuth client ID.
+   - Replace `YOUR_GITHUB_CLIENT_ID` in `index.html` with your actual GitHub OAuth client ID.
 
-3. Open `updatedindex.html` in your browser to view the site.
+3. Open `index.html` in your browser to view the site.
 
 ## Contact
 
