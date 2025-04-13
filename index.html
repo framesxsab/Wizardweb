@@ -33,20 +33,76 @@
             }
         };
     </script>
+    <style>
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: rgba(13, 25, 51, 0.9);
+            padding: 1rem;
+            z-index: 50;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around; 
+            width: 30px;
+            height: 25px;
+        }
+
+        .hamburger .line {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 <body class="text-white leading-relaxed bg-hero-pattern bg-fixed bg-cover bg-no-repeat">
     <header class="py-2 fixed w-full top-0 z-10 bg-transparent backdrop-blur-sm">
         <nav class="bg-gradient-to-r from-dark-blue/50 via-navy-blue/40 to-dark-blue/50 w-11/12 max-w-6xl mx-auto my-2 rounded-full flex justify-between items-center px-6 py-3 hover:shadow-[0_0_30px_rgba(37,99,235,0.2)] transition-all duration-300">
             <a href="#" class="text-2xl font-cinzel text-white hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">GDG</a>
-            <ul class="flex space-x-8 text-lg font-cinzel">
-                <li><a href="#about" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">About</a></li>
-                <li><a href="#events" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">Events</a></li>
-                <li><a href="#contact" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">Contact</a></li>
-                <li>
-                    <button onclick="toggleLoginModal()" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Login</button>
-                </li>
-            </ul>
+            <div class="nav-links flex items-center space-x-8 text-lg font-cinzel">
+                <a href="#about" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">About</a>
+                <a href="#events" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">Events</a>
+                <a href="#contact" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">Contact</a>
+                <button onclick="toggleLoginModal()" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Login</button>
+            </div>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="#about" class="block py-2 hover:text-blue-400 transition-all duration-300">About</a>
+            <a href="#events" class="block py-2 hover:text-blue-400 transition-all duration-300">Events</a>
+            <a href="#contact" class="block py-2 hover:text-blue-400 transition-all duration-300">Contact</a>
+            <button onclick="toggleLoginModal()" class="block py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Login</button>
+        </div>
     </header>
 
     <main class="bg-gradient-to-b from-dark-blue/90 via-navy-blue/80 to-dark-blue/90 relative">
@@ -66,7 +122,9 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-gradient-to-br from-dark-blue/50 via-navy-blue/40 to-dark-blue/50 rounded-2xl p-8 hover:shadow-[0_0_40px_rgba(37,99,235,0.2)] transition-all duration-500">
                         <h2 class="text-4xl font-cinzel mb-8 text-center">About Us</h2>
-                        <p class="font-pt-serif text-gray-300 max-w-2xl mx-auto text-center">GDG is a community of developers interested in Google's developer technology.</p>
+                        <p class="font-pt-serif text-gray-300 max-w-2xl mx-auto text-center">
+                            We’re a community-driven initiative aiming to bridge the gap between research and practice, develop evolutionary thinking and network throughout the process. We believe in connecting fellow developers, spreading stimulative ideas and working for a solution driven team.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -170,7 +228,7 @@
                         <div class="flex justify-center space-x-6">
                             <a href="https://github.com/RCOEM-Google-DSC/webwiz-3.0" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-blue-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] p-2 rounded-full"><i class="fab fa-github"></i></a>
                             <a href="#" class="text-2xl hover:text-blue-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] p-2 rounded-full"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="text-2xl hover:text-blue-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] p-2 rounded-full"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/company/gdg-rbu/" class="text-2xl hover:text-blue-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] p-2 rounded-full"><i class="fab fa-linkedin"></i></a>
                             <a href="mailto:gdgrbu@gmail.com" class="text-2xl hover:text-blue-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] p-2 rounded-full"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
@@ -202,6 +260,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="text-center mt-8 font-pt-serif text-gray-400">
+                    &copy; 2024 GDG. All rights reserved. | <a href="#" class="hover:text-blue-300">Privacy Policy</a> | <a href="#" class="hover:text-blue-300">Terms of Service</a>
+                </div>
             </footer>
         </div>
 
@@ -212,7 +273,7 @@
                     <i class="fas fa-times text-2xl"></i>
                 </button>
                 <h1 class="text-4xl font-cinzel text-center mb-6 text-blue-400 hover:text-blue-300 transition-all duration-300">Login</h1>
-                <form action="/login" method="POST" class="space-y-6">
+                <form onsubmit="return login(document.getElementById('username').value, document.getElementById('password').value)" class="space-y-6">
                     <div>
                         <label for="username" class="block text-sm font-medium text-gray-300 mb-2">Username</label>
                         <input type="text" id="username" name="username" class="w-full px-4 py-2 rounded-lg bg-dark-blue/90 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-dark-blue" required>
@@ -221,9 +282,19 @@
                         <label for="password" class="block text-sm font-medium text-gray-300 mb-2">Password</label>
                         <input type="password" id="password" name="password" class="w-full px-4 py-2 rounded-lg bg-dark-blue/90 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-dark-blue" required>
                     </div>
-                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 hover:shadow-[0_0_20px_rgba(37,99,235,0.6)] transition-all duration-300">Login</button>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="remember" name="remember" class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded bg-dark-blue/90">
+                            <label for="remember" class="text-sm text-gray-300">Remember Me</label>
+                        </div>
+                        <a href="#" onclick="forgotPassword()" class="text-sm text-blue-400 hover:text-blue-300 hover:underline transition-all duration-300">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 hover:shadow-[0_0_20px_rgba(37,99,235,0.6)] transition-all duration-300">
+                        <span id="loginButtonText">Login</span>
+                        <i id="loginSpinner" class="fas fa-spinner fa-spin hidden"></i>
+                    </button>
                 </form>
-                <p class="text-center text-sm text-gray-400 mt-4">Don't have an account? <a href="/register" class="text-blue-400 hover:text-blue-300 hover:underline transition-all duration-300">Register</a></p>
+                <p class="text-center text-sm text-gray-400 mt-4">Don't have an account? <a href="register.html" class="text-blue-400 hover:text-blue-300 hover:underline transition-all duration-300">Register</a></p>
             </div>
         </div>
     </main>
@@ -233,6 +304,15 @@
             const modal = document.getElementById('loginModal');
             modal.classList.toggle('hidden');
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            hamburger.addEventListener('click', function () {
+                mobileMenu.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>
