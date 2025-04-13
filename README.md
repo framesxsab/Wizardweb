@@ -21,21 +21,10 @@ Welcome to **Wizardweb**, a magical web portal designed for the Google Developer
 
 Follow these steps to set up Wizardweb on your local machine:
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/framesxsab/wizardweb.git
-   ```
 
-2. **Run the project**:
-   - Open `updatedindex.html` in your browser to explore the magical world of Wizardweb.
+3. Open `index.html` in your browser to view the site.
 
-## 📞 Contact Us
+## Contact
 
-We’d love to hear from you! If you have any questions, feedback, or just want to say hi, feel free to reach out:
-
-- **GitHub**: [framesxsab/wizardweb](https://github.com/framesxsab/wizardweb)
-- **Email**: newman123@gmail.com
-
----
-
-Thank you for visiting Wizardweb! We hope you enjoy the magical experience. ✨
+- GitHub: [RCOEM-Google-DSC/webwiz-3.0](https://github.com/RCOEM-Google-DSC/webwiz-3.0)
+- Email: gdgrbu@gmail.com
