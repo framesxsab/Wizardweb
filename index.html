@@ -37,17 +37,24 @@
         /* Mobile Menu Styles */
         .mobile-menu {
             display: none;
-            position: absolute;
-            top: 100%;
+            position: fixed;
+            top: 80px;
             left: 0;
             width: 100%;
-            background-color: rgba(13, 25, 51, 0.9);
-            padding: 1rem;
+            background-color: rgba(13, 25, 51, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 1.5rem;
             z-index: 50;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: all 0.3s ease;
         }
 
         .mobile-menu.active {
             display: block;
+            transform: translateY(0);
+            opacity: 1;
         }
 
         @media (max-width: 768px) {
@@ -56,24 +63,100 @@
             }
 
             .hamburger {
-                display: block;
-                cursor: pointer;
+                display: flex;
+            }
+
+            /* Mobile Typography */
+            h1.text-6xl {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            h2.text-4xl {
+                font-size: 1.5rem;
+            }
+
+            h2.text-3xl {
+                font-size: 1.25rem;
+            }
+
+            .text-xl {
+                font-size: 1rem;
+            }
+
+            /* Mobile Spacing */
+            .py-20 {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            .mb-8 {
+                margin-bottom: 1rem;
+            }
+
+            /* Mobile Grid */
+            .grid.md\:grid-cols-2 {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            /* Mobile Menu Items */
+            .mobile-menu {
+                position: fixed;
+                top: 70px;
+                padding: 1rem;
+            }
+
+            .mobile-menu a, 
+            .mobile-menu button {
+                min-height: 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0.5rem 0;
+                font-size: 1.1rem;
+                touch-action: manipulation;
+            }
+
+            /* Touch-friendly buttons */
+            button, 
+            a[href]:not(.text-2xl) {
+                min-height: 44px;
+                padding: 0.75rem 1.5rem;
+            }
+
+            /* Section padding */
+            section {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            /* Container width */
+            .max-w-4xl {
+                width: 95%;
+            }
+
+            /* Image sizes */
+            img.w-40 {
+                width: 30%;
+                height: auto;
+            }
+
+            img.w-32 {
+                width: 25%;
+                height: auto;
             }
         }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: space-around; 
-            width: 30px;
-            height: 25px;
-        }
+        /* Adjust header for mobile */
+        @media (max-width: 640px) {
+            nav {
+                padding: 0.75rem 1rem;
+            }
 
-        .hamburger .line {
-            width: 100%;
-            height: 3px;
-            background-color: white;
-            transition: all 0.3s ease;
+            .w-11\/12 {
+                width: 95%;
+            }
         }
     </style>
 </head>
@@ -308,10 +391,37 @@
         document.addEventListener('DOMContentLoaded', function () {
             const hamburger = document.querySelector('.hamburger');
             const mobileMenu = document.querySelector('.mobile-menu');
+            const body = document.querySelector('body');
 
             hamburger.addEventListener('click', function () {
+                this.classList.toggle('active');
                 mobileMenu.classList.toggle('active');
+                // Prevent body scroll when menu is open
+                body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
             });
+
+            // Handle touch events better
+            document.addEventListener('touchstart', function(e) {
+                if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    body.style.overflow = '';
+                }
+            }, {passive: true});
+
+            // Adjust mobile menu position on scroll
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', function() {
+                const st = window.pageYOffset;
+                if (st > lastScrollTop) {
+                    // Scrolling down
+                    mobileMenu.style.top = '0';
+                } else {
+                    // Scrolling up
+                    mobileMenu.style.top = '70px';
+                }
+                lastScrollTop = st;
+            }, {passive: true});
         });
     </script>
 </body>
