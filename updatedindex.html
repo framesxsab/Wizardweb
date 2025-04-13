@@ -46,9 +46,7 @@
                 <li><a href="#events" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">Events</a></li>
                 <li><a href="#contact" class="hover:text-blue-400 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300">Contact</a></li>
                 <li>
-                    <button onclick="loginWithGithub()" class="flex items-center px-4 py-2 bg-gradient-to-r from-blue-600/30 via-blue-500/30 to-blue-600/30 text-blue-400 rounded-full hover:from-blue-600/50 hover:via-blue-500/50 hover:to-blue-600/50 transition-all duration-300">
-                        <i class="fab fa-github mr-2"></i>Login
-                    </button>
+                    <button onclick="toggleLoginModal()" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Login</button>
                 </li>
             </ul>
         </nav>
@@ -63,7 +61,7 @@
                     <h1 class="text-6xl font-cinzel mb-6 hover:text-blue-400 hover:scale-105 transform transition-all duration-500 hover:shadow-[0_0_50px_rgba(37,99,235,0.3)] rounded-lg">Google Developer Group</h1>
                     <p class="text-xl font-pt-serif max-w-2xl mx-auto text-gray-300 mb-8">Join our community of developers, designers, and tech enthusiasts to learn, share, and grow together.</p>
 
-                    <a href="#" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-cinzel rounded-full hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">Join Now</a>
+                    <a href="http://rbu.gdgoc.one" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-cinzel rounded-full hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">Join Now</a>
                 </div>
             </section>
 
@@ -209,6 +207,35 @@
                 </div>
             </footer>
         </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="fixed inset-0 bg-black/70 flex items-center justify-center hidden z-50">
+            <div class="bg-gradient-to-br from-dark-blue/80 via-navy-blue/70 to-dark-blue/80 p-8 rounded-2xl shadow-[0_0_40px_rgba(37,99,235,0.5)] max-w-sm w-full relative">
+                <button onclick="toggleLoginModal()" class="absolute top-4 right-4 text-gray-300 hover:text-red-500 transition">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <h1 class="text-4xl font-cinzel text-center mb-6 text-blue-400 hover:text-blue-300 transition-all duration-300">Login</h1>
+                <form action="/login" method="POST" class="space-y-6">
+                    <div>
+                        <label for="username" class="block text-sm font-medium text-gray-300 mb-2">Username</label>
+                        <input type="text" id="username" name="username" class="w-full px-4 py-2 rounded-lg bg-dark-blue/90 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-dark-blue" required>
+                    </div>
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-300 mb-2">Password</label>
+                        <input type="password" id="password" name="password" class="w-full px-4 py-2 rounded-lg bg-dark-blue/90 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-dark-blue" required>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 hover:shadow-[0_0_20px_rgba(37,99,235,0.6)] transition-all duration-300">Login</button>
+                </form>
+                <p class="text-center text-sm text-gray-400 mt-4">Don't have an account? <a href="/register" class="text-blue-400 hover:text-blue-300 hover:underline transition-all duration-300">Register</a></p>
+            </div>
+        </div>
     </main>
+
+    <script>
+        function toggleLoginModal() {
+            const modal = document.getElementById('loginModal');
+            modal.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
